@@ -1,9 +1,7 @@
 # Jouko
-Joustava Kotitalous - päärepository
+Joustava Kotitalous - ohjauslaitteen repository.
 
 Tänne repositoryyn tulee:
-PDF-dokumentit
+- linkki ylemmän tason pääresositoryyn: https://github.com/Teukka/JoustavaKotitalous 
 
-Tänne repositoryyn tulee linkit:
 - Ohjauslaitteen ohjelmisto
-- Palvelimen, koti-UI, palvelin-UI:n ohjelmisto
