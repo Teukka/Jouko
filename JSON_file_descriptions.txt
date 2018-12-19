@@ -1,0 +1,29 @@
+JSON-file descriptions
+
+The functional settings of the device are loaded from JSON files when initiating the main program. Settings divided into several different files so that update procedure can be limited to updating only the desired features. The settings can be activated or deactivated by setting the value as ëtrueí or ëfalseí or by changing the numeric values.
+
+1 - asetukset.json - general settings for all devices: the durations of the measurement cycles and communication cycles, definition of the processor measurement reading speed
+2 - kommunikaatio.json - communication settings for radio communications: defines the communication channel (GRPS, Lora or ethernet) and also settings such as addresses, device names, and communication keys.
+3 - testiasetukset.json - test settings that useful for further development. Test settings can be easily activated or deactivated by setting the values ëtrueí or ëfalseí eg. speeding up the testing process by shortening delays.
+4 - kalibrointi.json - calibrated values for the hardware to ensure accuracy of measurements. The automatic zero-level calibration of the current measurement also stores the values here. The automatic zero-current calibration can be activated here.
+5 - paivityksenTila.json - defines the update settings and the version number of the current software.
+
+Additionally json files exist for other special purposes such as calibration and operation controlling.
+6 - toimintatila.json - Select the operating mode of the device for running calibration measurements: calibrate the voltage measurement (ëkalibroidaanJanniteí), calibrate the current measurement (ëkalibroidaanVirta ë) and verify the calibration (ëvarmennetaanKalibrointií).
+7 - ohjelmanTila.json - storage that is used to tell about the correct operation of the device.
+
+
+JSON-tiedostojen kuvaukset
+
+Laitteen toiminnalliset asetukset ladataan JSON-tiedostoista p‰‰ohjelman k‰ynnistyess‰.
+Asetukset jaettu useisiin eri tiedostoihin, jotta p‰ivitt‰minen voidaan rajoittaa/sallia haluttuihin ominaisuuksiin. Toiminnan muuttaminen tapahtuu muuttamalla json-tiedostoihin muuttujien arvoiksi, muuttujan tyypist‰ riippuen esim. soveltuva lukuarvo, osoite tai ëtrueí tai ëfalseí.
+
+1 - asetukset.json - yleiset asetukset kaikille laitteille: mittaussyklien ja kommunikaatiosyklien kestot, tietokoneen prosessorin mittausten lukemisnopeuden m‰‰ritteleminen
+2 - kommunikaatio.json - kommunikaatio asetukset radioliikenteelle: m‰‰ritell‰‰n kommunikaatiokanava (GRPS, Lora tai ethernet) ja seka asetukset, kuten osoitteet, laitteiden nimet ja avaimet
+3 - testiasetukset.json - kehitysvaiheessa hyˆdylliset testiasetukset. Voidaan helposti ottaa k‰yttˆˆn ja poistaa k‰ytˆst‰ mm. testauksen nopeuttaminen taukoja lyhent‰m‰ll‰.
+4 - kalibrointi.json ñ laitteistolle kalibroidut arvot mittaustarkkuuden varmistamiseksi. Myˆs automaattinen virtamittauksen nollatason kalibrointi tallentaa arvonsa t‰nne. Automaattinen nollavirran kalibrointi, voidaan asettaa t‰‰ll‰ p‰‰lle tai pois.
+5 - paivityksenTila.json ñ m‰‰ritell‰‰n p‰ivityksen asetukset ja nykyisen ohjelmistop‰ivityksen versionumero
+
+Lisaksi mm.
+6 toimintatila.json ñ valitaan laitteen toimintatila kalibrointimittauksia varten: kalibroidaanJannite, kalibroidaanVirta, ja varmennetaanKalibrointi.
+7 ohjelmanTila.json ñ k‰ytet‰‰n kertomaan laitteiston oikeellisesta toiminnasta

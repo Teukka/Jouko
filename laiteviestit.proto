@@ -1,0 +1,101 @@
+syntax = "proto2";
+
+package fi.metatavu.jouko.api.device;
+
+message Katkot {
+	message Katko {
+		required int64 katkoID = 1;
+		required int64 laiteID = 2;
+		required int64 alku = 3;
+		required int64 loppu = 4;
+	}
+
+	repeated Katko katkot = 1;
+}
+
+
+message Katkonestot {
+	message Katkonesto {
+		required int64 katkoID = 1;
+	}
+
+	repeated Katkonesto katkonestot = 1;
+}
+
+message AikasynkLaitteelle {
+	required int64 erotus = 1;
+}
+
+message VersioKysely {
+	required bool versioKysely = 1;
+}
+
+message SbUpdateStart {
+    required int32 numFiles = 1;
+}
+
+message SbUpdatePart {
+    required int64 num = 1;
+    required string part = 2;
+}
+
+message SbUpdateStop {
+    required int64 splitSize = 1;
+    required int32 numFiles = 2;
+    required string fileName = 3;
+    required int32 versioNumero = 4;
+}
+
+message SbUpdateFinish {
+  required int32 updateId = 1;
+  required string fileName = 2;
+  required int32 numParts = 3;
+  optional int32 checkSum = 4;
+}
+
+message SbUpdateInstall {
+	repeated int32 updateId = 1;
+	enum InstallType {
+	 RESTART = 0;
+  }
+	required InstallType installType = 2;
+}
+
+message Mittaukset {
+	repeated int32 keskiarvot = 1; // L1,L2,L3,L1,L2...
+	optional int32 pituusMinuutteina = 2; // by default 30
+	required int64 aika = 3;
+	required int64 laiteID = 4;
+	required int32 releOhjaukset = 5; // bitfield for relay usage, LSB first
+}
+
+message VersioVastaus {
+	required int64 versio = 1;
+}
+
+message AikasynkLaitteelta {
+	required int64 laiteaika = 1;
+	optional int32 syy = 2;
+}
+
+message ViestiLaitteelle {
+	oneof viesti {
+		Katkot katkot = 1;
+		Katkonestot katkonestot = 2;
+		AikasynkLaitteelle aikasynkLaitteelle = 3;
+		SbUpdatePart sbUpdatePart = 4;
+		SbUpdateFinish sbUpdateFinish = 5;
+		SbUpdateInstall sbUpdateInstall = 6;
+		VersioKysely versioKysely = 7;
+        SbUpdateStart sbUpdateStart = 8;
+        SbUpdateStop sbUpdateStop = 9;
+	}
+}
+
+message ViestiLaitteelta {
+	oneof viesti {
+		Mittaukset mittaukset = 1;
+		AikasynkLaitteelta aikasynkLaitteelta = 2;
+		VersioVastaus versioVastaus = 3;
+	}
+}

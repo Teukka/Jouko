@@ -1,0 +1,33 @@
+{
+	"com":{ 
+		"GPRSMode":false,
+		"LoraMode":false,
+		"ethernetMode":true,
+		"BTmode":false,
+		"BTslaveMode":false,
+		"shakey" : "11223344556677889900112233445566",
+		"binaryshakey" : "b'11223344556677889900112233445566'",
+		"omaLaiteID" : 5,
+		"BTlaiteID1" : 8,
+		"BTlaiteID2" : 9,
+		"BTlaiteID3" : 10,
+		"BTlaiteID4" : 11
+	},
+	"GPRS":{
+		"postURL_testi": "https://jouko.theunwashed.org/nr/postia",
+		"postURL": "https://jouko-api.metatavu.io/v1/gprs/gprs/4321",
+		"laite_nimi": "4321",
+		"laite_pw": "DEVICEKEY",
+		"APNdna": "prepaid.dna.fi",
+		"APNtelia": "internet",
+		"APN": "internet"
+	},
+	"BT":{	
+		"BTlaite_osoite1": "01D6F00A6AAD68",
+		"BTlaite_osoite2": "01D6F00A6AAD68",
+		"BTlaite_osoite3": "01D6F00A6AAD68",
+		"BTlaite_osoite4": "01D6F00A6AAD68",
+		"BTlaite_lkm": "1",
+		"BTlaite_nimi1": "LAIRD RM186_PE"
+	}
+}	

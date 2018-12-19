@@ -1,0 +1,14 @@
+{
+	"test": {
+		"Raspi": true,
+		"debugON": true,
+		"OhitaAlunTauko": true,
+		"vakioJannite": false,
+		"janniteOnTuhat": false,
+		"fakeTimeSpeedUp": true,
+		"LoraJoinedAtStart": false,
+		"GPRSJoinedAtStart": false,
+		"saveData": false,
+		"kerroAsetukset": true
+	}
+}	

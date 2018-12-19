@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=RPi-infoscreen
+Comment=Kivy RPI Infoscreen
+NoDisplay=false
+Exec=/usr/bin/lxterminal -e /home/pi/startJoukoOnScreen.sh
+NotShowIn=GNOME;KDE;XFCE;

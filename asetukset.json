@@ -1,0 +1,8 @@
+{
+	"general":{	
+		"purskeidenLukemisVali": 30,
+		"mittausPurskeita": 2, 
+		"mittauksiaTallennetaan": 1, 
+		"mittauksiaSekunnissa": 183
+	}
+}	

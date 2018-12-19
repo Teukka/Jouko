@@ -1,0 +1,7 @@
+{
+	"toimintatila": {
+		"kalibroidaanJannite": false,
+		"kalibroidaanVirta": false,
+		"varmennetaanKalibrointi": true
+	}
+}	

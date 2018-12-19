@@ -1,0 +1,5 @@
+Split and JOIN file
+https://stonesoupprogramming.com/2017/09/16/python-split-and-join-file/ 
+Explanation
+split
+The code snippet shows to sample functions that either split a file into parts or join those parts back together into one file. The split function begins by taking three parameters. The first parameter, source, is the file that we wish to split. The second parameter, dest_folder, is a folder that stores the output files created by the split operation. The final parameter, write_size, is the siz
