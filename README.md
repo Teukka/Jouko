@@ -1,7 +1,8 @@
 # Jouko, control device software repository
 
 Flexible Power Usage at Home, JouKo project, Control device software repository
-Link to JouKo project main repository: https://github.com/Teukka/FlexHomeElPower
+
+JouKo project main repository is located at: https://github.com/Teukka/FlexHomeElPower
 
 Installation guide of this software can be downloaded in PDF-format at: https://github.com/Teukka/FlexHomeElPower/blob/master/ControlDeviceDocuments/Install_Guide_Jouko_Control_Device.pdf
 
