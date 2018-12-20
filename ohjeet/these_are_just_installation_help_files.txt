@@ -1,1 +1,1 @@
-These are just files that can be used to help the installation process. See the guide.
+These are just files that can be used to aid the installation process. See the guide.
