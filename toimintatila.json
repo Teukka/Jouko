@@ -2,6 +2,6 @@
 	"toimintatila": {
 		"kalibroidaanJannite": false,
 		"kalibroidaanVirta": false,
-		"varmennetaanKalibrointi": true
+		"varmennetaanKalibrointi": false
 	}
 }	
