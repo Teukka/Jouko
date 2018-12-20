@@ -1,0 +1,42 @@
+RM186 LoRa – Setting the communication keys with AT commands
+
+In loRa communication, the keys are set to either OTAA or ABP. Now we use “Over-the-Air Authentication” (OTAA), so we only need: AppEui, DevEui and AppKey on the device. Other keys / addresses are automatically set up at the server.
+
+Setting The Keys – using OTAA (Over-the-Air Authentication)
+The default value is used for the DevEui. This avoids duplicate use of device addresses.
+Setting the values for: AppEui and AppKey
+
+Define AppEui (8 Bytes)
+Run command:
+at+cfgex 1010 “xxxxxxxx”
+eg at+cfgex 1010 "12345678"
+
+Define AppKey (16 Bytes)
+Run command:
+at+cfgex 1012 “xxx…xxx”
+eg. at+cfgex 1012 "12c87fc0da000001"
+
+Query for DevEui (8 Bytes)
+A global value for DevEui is preset. The command 'ati 25' returns the global value. Run command:
+ati 25
+
+The entered keys will only be effective after a manual restart.
+Run command:
+atz
+
+EXTRA: Define custom DevEui (8 Bytes) – NOT RECOMMENDED
+If you want to change a custom DevEui for the device, it can be defined.
+at+cfgex 1011 “xxxxxxx” – NOTE! This command would set a custom DevEui. Do not use.
+
+EXTRA: Setting the Keys – using ABP (Activation by Personalization)
+AppEui, DevEui, and AppKey are sufficient when OTAA (Over-the-Air Authentication) is used.
+When using "Activation by Personalization" (ABP), you must also set device-specific settings for: Network Session Key (NwkSKey), Application Session Key (AppSKey), and End Device Address (DevAddr).
+
+The commands for defining these values are following.
+NwkSKey (16 bytes)
+at+cfgex 1013 “xxx.xxxx”
+AppSKey (16 bytes)
+at+cfgex 1014 “xxx.xxx”
+DevAddr (4 bytes)
+at+cfgex 1015 “xxxx”
+esim. at+cfgex 1013 "2b7e151628aed2a6abf7158809cf4f3c"
