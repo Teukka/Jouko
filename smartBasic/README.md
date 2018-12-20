@@ -1,3 +1,3 @@
 # SmartBasic files for RM186
 
-The are ready-compiled smartBasic software files.
+These are ready-compiled smartBasic software files for RM186.
