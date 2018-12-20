@@ -1,6 +1,6 @@
 {
 	"test": {
-		"debugON": false,
+		"debugON": true,
 		"OhitaAlunTauko": false,
 		"vakioJannite": false,
 		"janniteOnTuhat": false,
